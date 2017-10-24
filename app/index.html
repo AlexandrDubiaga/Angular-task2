@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html ng-app = "app" ng-controller="nameController">
+<html>
     <head>
         <script src="./lib/angular/angular.min.js"></script> 
         <script src="./main.js"></script>       
     </head>
     <body>
-        <div ng-init = "text = 'Hosting max'">
-            {{text}}
-        </div>
-                <input ng-model="searchList" type="text" name="name">                    
+            <div ng-app="docsSimpleDirective" ng-controller="Controller">
+                    <my-customer info="Hello">
+                       
+                    </my-customer>
             </div>
-            <div>
-                <ul>
-                    <li ng-repeat="li in names | filter:searchList">{{li}}</li>
-                </ul>     
-        </div>
-        <input type="text" ng-model="fname">
-        <div ng-controller="nameController as settings">
-            <input type="button" ng-click = "settings.addName(fname)" value="go">   
-             <ul>
-                <li ng-repeat  ="li in settings.names track by $index"  >{{li}}</li>     
-            </ul>
-        </div>
     </body> 
 </html>
